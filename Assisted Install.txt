@@ -1,0 +1,13 @@
+[Assisted Install]
+
+License Accepted=1
+
+Deployment Options=0
+
+Admin Console User=
+
+Admin Console Password=
+
+Admin Console PIN=
+
+License Certificate Path=
