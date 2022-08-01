@@ -1,15 +1,17 @@
-filemaker-server:
-  container_name: filemaker-server
-  privileged: true
-  image: fmsdocker:final
-  # build: .
-  ports:
-    - "80:80"
-    - "443:443"
-    - "2399:2399"
-    - "5003:5003"
-  volumes:
-    # for a new database set <volume name>:"/opt/FileMaker/FileMaker Server/Data"
-    # to import existing databases set <data path>:"/opt/FileMaker/FileMaker Server/Data"
-    - "<path or name>:/opt/FileMaker/FileMaker Server/Data"
-  restart: "unless-stopped"
+services:
+  filemaker-server:
+    platform: linux/amd64
+    container_name: filemaker-server
+    #image: fmsdocker:final
+    build: .
+    privileged: true
+    ports:
+      - "80:80"
+      - "443:443"
+      - "2399:2399"
+      - "5003:5003"
+    volumes:
+      # for a new database set <volume name>:"/opt/FileMaker/FileMaker Server/Data"
+      # to import existing databases set <data path>:"/opt/FileMaker/FileMaker Server/Data"
+      - "<path or name>:/opt/FileMaker/FileMaker Server/Data"
+    restart: "unless-stopped"
