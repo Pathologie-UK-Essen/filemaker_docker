@@ -10,4 +10,4 @@ Admin Console Password=<password>
 
 Admin Console PIN=<pin>
 
-License Certificate Path=/fm_installer/
+License Certificate Path=/fm_installer
