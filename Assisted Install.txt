@@ -4,10 +4,10 @@ License Accepted=1
 
 Deployment Options=0
 
-Admin Console User=
+Admin Console User=<user>
 
-Admin Console Password=
+Admin Console Password=<password>
 
-Admin Console PIN=
+Admin Console PIN=<pin>
 
-License Certificate Path=
+License Certificate Path=/fm_installer/
