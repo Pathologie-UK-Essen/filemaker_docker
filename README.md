@@ -34,7 +34,7 @@ Therefore, building an valid image requires some manual steps violating best pra
 
 ## Running the server
 
-Execute `docker-compuse up --detach`
+Execute `docker-compose up --detach`
 
 
 ## Access Admin console
