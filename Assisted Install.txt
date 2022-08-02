@@ -10,4 +10,4 @@ Admin Console Password=
 
 Admin Console PIN=
 
-License Certificate Path=/
+License Certificate Path=
