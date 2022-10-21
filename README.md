@@ -21,9 +21,9 @@ Therefore, building an valid image requires some manual steps violating best pra
   - download and installer filemaker server:
     ```
     cd fm_installer
-    curl https://downloads.claris.com/esd/fms_19.5.2.201_Ubuntu20.zip -o fm_installer.zip
+    curl https://downloads.claris.com/esd/fms_19.5.4.400_Ubuntu20.zip -o fm_installer.zip
     unzip -n fm_installer.zip
-    FM_ASSISTED_INSTALL=/fm_installer apt install -y ./filemaker-server-19.5.2.201-amd64.deb
+    FM_ASSISTED_INSTALL=/fm_installer apt install -y ./filemaker-server-19.5.4.400-amd64.deb
     cd ..
     rm -r fm_installer
     ```
