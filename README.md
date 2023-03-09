@@ -2,8 +2,8 @@
 
 ## Introduction
 
-Building a Dockerfile for FileMaker Server turned out to be challenging as the FileMaker installer failes on executing `systemctl` commands which is an previleged operation not available during build the process.
-Therefore, building an valid image requires some manual steps violating best practices (see [FileMaker Documentation](https://support.claris.com/s/article/Running-FileMaker-Server-in-a-Docker-container)).       
+Building a Dockerfile for FileMaker Server turned out to be challenging as the FileMaker installer fails on executing `systemctl` commands which is an previleged operation not available during the build  process.
+Therefore, building an valid image requires some manual steps violating best practices (see [FileMaker Documentation](https://support.claris.com/s/article/Running-FileMaker-Server-in-a-Docker-container-for-Ubuntu-20-04)).       
 
 ## Prerequisites
 
