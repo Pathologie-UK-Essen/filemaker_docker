@@ -63,7 +63,8 @@ RUN DEBIAN_FRONTEND=noninteractive \
         nginx \
         logrotate \
         acl \
-        libcurl3-gnutls && \
+        libcurl3-gnutls \
+        lsb-release && \
     # clean up
     apt autoremove -y && \
     rm -rf /var/lib/apt/lists/*

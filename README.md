@@ -28,9 +28,19 @@ Therefore, building an valid image requires some manual steps violating best pra
     rm -r fm_installer
     ```
   - close docker session
-  - commit changes into docker image `docker commit fms-docker fmsdocker:final`
+  - commit changes into docker image `docker commit fms-docker fmsdocker:config`
   - stop container: `docker stop fms-docker`
   - remove container: `docker container rm fms-docker`
+
+## Configure server
+
+It seems like not all configurations are saved within the Data folder. Therefore some configuration (e.g. activation of REST-API) maybe lost after restarting the docker images. To avoid this the initial configuration should be done first and commited into a final image
+
+  - run unconfigured image: `docker-compose up --detach`
+  - set configurations
+  - save configurations: `docker commit filemaker-server fmsdocker:final`
+  - `docker-compose down`
+  - set image to `fmsdocker:final` in `docker-compose.yaml`
 
 ## Running the server
 
@@ -40,3 +50,8 @@ Execute `docker-compose up --detach`
 ## Access Admin console
 
 The FileMaker admin console is available by calling `https://127.0.0.1:443/admin-console`.
+
+## Known Issues
+
+It seems like smtp user name and password for notifications are being lost after each reboot and need to reset.
+Even when configured before creating the final image this data does not persist.

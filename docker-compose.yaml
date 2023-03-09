@@ -2,7 +2,7 @@ services:
   filemaker-server:
     platform: linux/amd64
     container_name: filemaker-server
-    image: fmsdocker:final
+    image: fmsdocker:config
     #build: .
     privileged: true
     ports:
@@ -14,4 +14,5 @@ services:
       # for a new database set <volume name>:"/opt/FileMaker/FileMaker Server/Data"
       # to import existing databases set <data path>:"/opt/FileMaker/FileMaker Server/Data"
       - "<name or path>:/opt/FileMaker/FileMaker Server/Data"
+      - "<name or path>:/opt/FileMaker_Backup"
     restart: "unless-stopped"
